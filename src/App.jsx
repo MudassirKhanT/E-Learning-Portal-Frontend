@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import Verify from "./pages/Auth/Verify";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/verify" element={<Verify />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
