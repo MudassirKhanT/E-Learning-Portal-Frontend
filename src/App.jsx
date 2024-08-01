@@ -8,6 +8,8 @@ import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import Verify from "./pages/Auth/Verify";
 import Footer from "./components/Footer/Footer";
+import About from "./pages/About/About";
+import Account from "./pages/Account/Account";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/account" element={<Account />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/verify" element={<Verify />} />
