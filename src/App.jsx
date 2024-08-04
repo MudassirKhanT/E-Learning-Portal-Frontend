@@ -13,6 +13,8 @@ import Account from "./pages/Account/Account";
 import { UserContext } from "./context/UserContext";
 import Loading from "./components/Loading/Loading";
 import Courses from "./pages/Courses/Courses";
+import CourseDescription from "./pages/CourseDescription/CourseDescription";
+import PaymentSuccess from "./pages/PaymentSuccess/PaymentSuccess";
 
 const App = () => {
   const { isAuth, user, loading } = useContext(UserContext);
@@ -28,11 +30,12 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/courses" element={<Courses />} />
-
             <Route path="/account" element={isAuth ? <Account user={user} /> : <Login />} />
             <Route path="/login" element={isAuth ? <Home /> : <Login />} />
             <Route path="/register" element={isAuth ? <Home /> : <Register />} />
             <Route path="/verify" element={isAuth ? <Home /> : <Verify />} />
+            <Route path="/course/:id" element={isAuth ? <CourseDescription user={user} /> : <Login />} />
+            <Route path="/payment-success/:id" element={isAuth ? <PaymentSuccess user={user} /> : <Login />} />
           </Routes>
           <Footer />
         </BrowserRouter>

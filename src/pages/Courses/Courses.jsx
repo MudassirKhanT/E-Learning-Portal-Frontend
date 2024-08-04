@@ -5,7 +5,7 @@ import { useContext } from "react";
 import CourseCard from "../../components/CourseCard/CourseCard";
 const Courses = () => {
   const { courses } = useContext(CourseContext);
-  console.log(courses);
+  //console.log(courses);
 
   return (
     <div className="courses">

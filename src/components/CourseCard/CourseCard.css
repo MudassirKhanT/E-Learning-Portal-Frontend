@@ -12,9 +12,9 @@
   }
 
   .course-image {
-    width: 100px;
-    height: 150px;
-    object-fit: contain;
+    width: 80%;
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
   }

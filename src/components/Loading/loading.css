@@ -1,7 +1,7 @@
 .loading-page {
   display: flex;
   align-items: center;
-  justify-content: baseline;
+  justify-content: center;
   height: 80vh;
 }
 
