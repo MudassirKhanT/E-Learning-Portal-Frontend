@@ -16,7 +16,7 @@ const CourseDescription = ({ user }) => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const { fetchUser } = useContext(UserContext);
-  const { fetchCourse, course, fetchCourses } = useContext(CourseContext);
+  const { fetchCourse, course, fetchCourses, fetchMyCourse } = useContext(CourseContext);
   //const { fetchCourse, course } = CourseData();
   useEffect(() => {
     console.log("hi:", fetchCourse(params.id));
@@ -38,7 +38,7 @@ const CourseDescription = ({ user }) => {
     );
 
     const options = {
-      key: "rzp_test_yOMeMyaj2wlvTt", // Enter the Key ID generated from the Dashboard
+      key: "rzp_test_ZdvT6oupOOnqkw", // Enter the Key ID generated from the Dashboard
       amount: order.id, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       currency: "INR",
       name: "E Learning", //your business name
@@ -64,6 +64,7 @@ const CourseDescription = ({ user }) => {
           );
           await fetchUser();
           await fetchCourses();
+          await fetchMyCourse();
           toast.success(data.message);
           setLoading(false);
           navigate(`/payment-success/${razorpay_payment_id}`);
