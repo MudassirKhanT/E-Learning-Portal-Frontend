@@ -3,6 +3,7 @@ import "./Auth.css";
 import { Link, useNavigate } from "react-router-dom";
 //import { UserData } from "../../context/UserContext";
 import { UserContext } from "../../context/UserContext";
+import { CourseContext } from "../../context/CourseContext";
 
 const Login = () => {
   const { btnLoading, loginUser } = useContext(UserContext);
@@ -10,9 +11,10 @@ const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { fetchMyCourse } = useContext(CourseContext);
   const submitHandler = async (e) => {
     e.preventDefault();
-    await loginUser(email, password, navigate, "");
+    await loginUser(email, password, navigate, fetchMyCourse);
   };
   return (
     <div className="auth-page">
