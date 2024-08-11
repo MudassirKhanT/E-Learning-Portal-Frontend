@@ -18,6 +18,9 @@ import PaymentSuccess from "./pages/PaymentSuccess/PaymentSuccess";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import CourseStudy from "./pages/CourseStudy/CourseStudy";
 import Lecture from "./pages/Lecture/Lecture";
+import AdminDashboard from "./admin/Dashboard/AdminDashboard";
+import AdminCourses from "./admin/Courses/AdminCourses";
+import AdminUsers from "./admin/Users/AdminUsers";
 
 const App = () => {
   const { isAuth, user, loading } = useContext(UserContext);
@@ -42,6 +45,9 @@ const App = () => {
             <Route path="/:id/dashboard" element={isAuth ? <Dashboard user={user} /> : <Login />} />
             <Route path="/course/study/:id" element={isAuth ? <CourseStudy user={user} /> : <Login />} />
             <Route path="/lecture/:id" element={isAuth ? <Lecture user={user} /> : <Login />} />
+            <Route path="/admin/dashboard" element={isAuth ? <AdminDashboard user={user} /> : <Login />} />
+            <Route path="/admin/course" element={isAuth ? <AdminCourses user={user} /> : <Login />} />
+            <Route path="/admin/users" element={isAuth ? <AdminUsers user={user} /> : <Login />} />
           </Routes>
           <Footer />
         </BrowserRouter>
