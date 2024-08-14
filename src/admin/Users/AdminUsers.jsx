@@ -60,11 +60,11 @@ const AdminUsers = ({ user }) => {
         <table border={"black"}>
           <thead>
             <tr>
-              <td>#</td>
-              <td>name</td>
-              <td>email</td>
-              <td>role</td>
-              <td>update role</td>
+              <td>S.No</td>
+              <td>Name</td>
+              <td>Email</td>
+              <td>Role</td>
+              <td>Update Role</td>
             </tr>
           </thead>
           {users &&

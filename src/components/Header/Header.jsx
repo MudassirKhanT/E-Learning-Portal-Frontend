@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
-const Header = ({ isAuth }) => {
+import { UserContext } from "../../context/UserContext";
+const Header = () => {
+  const { isAuth } = useContext(UserContext);
+  console.log(isAuth);
   return (
     <header>
       <div className="logo">E-Learning</div>

@@ -14,7 +14,7 @@
   .course-image {
     width: 80%;
     height: 250px;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 10px;
     margin-bottom: 10px;
   }

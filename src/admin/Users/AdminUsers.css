@@ -1,8 +1,43 @@
 .users {
-  width: 350px;
+  width: 98%;
   overflow-x: auto;
   white-space: nowrap;
   margin: 20px auto;
   min-height: 80vh;
-  border: solid gray 1px;
+
+  h1 {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #8a4baf;
+  }
+
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+
+  th,
+  td {
+    padding: 20px;
+  }
 }

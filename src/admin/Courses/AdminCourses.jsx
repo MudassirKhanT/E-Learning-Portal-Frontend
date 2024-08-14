@@ -91,13 +91,10 @@ const AdminCourses = ({ user }) => {
               <form onSubmit={submitHandler}>
                 <label htmlFor="text">Title</label>
                 <input type="text" value={title} onChange={(e) => setTilte(e.target.value)} required />
-
                 <label htmlFor="text">Description</label>
                 <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} required />
-
                 <label htmlFor="text">Price</label>
                 <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} required />
-
                 <label htmlFor="text">CreatedBy</label>
                 <input type="text" value={createdBy} onChange={(e) => setCreatedBy(e.target.value)} required />
                 <select value={category} onChange={(e) => setCategory(e.target.value)}>
@@ -110,7 +107,7 @@ const AdminCourses = ({ user }) => {
                 </select>
                 <label htmlFor="text">Duration</label>
                 <input type="number" value={duration} onChange={(e) => setDuration(e.target.value)} required />
-                {imagePreview && <img src={imagePreview} alt="preview" width={300} className="image"></img>}
+                {imagePreview && <img src={imagePreview} alt="preview" width={300} className="image"></img>} <br />
                 <button type="submit" disabled={btnLoading} className="common-btn" style={{ marginBottom: "5px" }}>
                   {btnLoading ? "Please Wait.." : "Add"}
                 </button>

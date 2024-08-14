@@ -11,10 +11,9 @@ const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { fetchMyCourse } = useContext(CourseContext);
   const submitHandler = async (e) => {
     e.preventDefault();
-    await loginUser(email, password, navigate, "");
+    await loginUser(email, password, navigate);
   };
   return (
     <div className="auth-page">

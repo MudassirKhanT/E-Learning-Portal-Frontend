@@ -13,18 +13,23 @@ const CourseStudy = ({ user }) => {
   useEffect(() => {
     fetchCourse(params.id);
   }, []);
+
+  const move = async () => {
+    navigate(`/lecture/${course._id}`);
+  };
   return (
     <>
       {course && (
         <div className="course-study-page">
-          <img src={`${server}/${course.image}`} alt="" width={350} />
+          <img className="course-image" src={`${server}/${course.image}`} alt="" width={350} />
           <h2>{course.title}</h2>
           <h4>{course.description}</h4>
           <h5>by - {course.createdBy}</h5>
           <h5>Duration - {course.duration} weeks</h5>
-          <Link to={`/lecture/${course._id}`}>
-            <h2>Lectures</h2>
-          </Link>
+
+          <button onClick={move} className="common-btn">
+            Lectures
+          </button>
         </div>
       )}
     </>
